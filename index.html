@@ -5,27 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Silikonoversikt</title>
   <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a33;
+      --muted: #8ea0bf;
+      --text: #e6eefc;
+      --radius: 16px;
+    }
     body {
       margin: 0; font-family: system-ui, sans-serif;
-      background: #0b1430;
-      color: #e6eefc;
+      background: radial-gradient(1200px 800px at 10% 0%, #0b1430 0%, var(--bg) 60%);
+      color: var(--text);
     }
     .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
     header { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
     header img { max-width: 220px; height: auto; }
-    .badge { font-size: 12px; color: #8ea0bf; background: rgba(255,255,255,.06); padding: 6px 10px; border-radius: 999px; }
-    .panel { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; }
+    .badge { font-size: 12px; color: var(--muted); background: rgba(255,255,255,.06); padding: 6px 10px; border-radius: 999px; }
+
+    .panel { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); }
     .toolbar { display: grid; gap: 12px; grid-template-columns: 1fr; padding: 16px; }
-    .search input { width: 100%; padding: 10px; border-radius: 8px; border: none; }
-    .select { padding: 10px; border-radius: 8px; }
-    .summary { padding: 12px 16px; color: #8ea0bf; }
+    .select, input { padding: 10px; border-radius: 8px; border: none; }
+    .summary { padding: 12px 16px; color: var(--muted); }
     .grid { display: grid; gap: 12px; padding: 12px; }
     @media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
     @media (min-width: 980px) { .grid { grid-template-columns: 1fr 1fr 1fr; } }
+
     .card { padding: 16px; border-radius: 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
     .card h3 { margin: 0; font-size: 18px; }
     .kv { display: grid; grid-template-columns: 120px 1fr; gap: 6px; font-size: 14px; }
-    .kv .k { color: #8ea0bf; }
+    .kv .k { color: var(--muted); }
     .pill { display: inline-block; border: 1px dashed rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 999px; font-size: 12px; cursor: pointer; }
   </style>
 </head>
@@ -57,59 +65,104 @@
 
   <script>
     const DATA = [
+      { stein: "Adia", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi", leverandor: "Colordek", platelengde: "3250 mm" },
+      { stein: "Arga", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi", leverandor: "Colordek", platelengde: "3250 mm" },
+      { stein: "Ava", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi", leverandor: "Colordek", platelengde: "3250 mm" },
+      { stein: "Avorio", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi", leverandor: "Colordek", platelengde: "3250 mm" },
+      { stein: "Nebu", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi", leverandor: "Colordek", platelengde: "3250 mm" },
+      { stein: "Taga", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi", leverandor: "Colordek", platelengde: "3250 mm" },
+      { stein: "Trevi", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi, ID: 907903", leverandor: "Colordek", platelengde: "3250 mm" },
+
+      { stein: "Kensho", steintype: "Silestone kompositt", silikon: "Alpina White, Kensho, ID: 93678", leverandor: "Colorsil", platelengde: "3250 mm" },
+      { stein: "Alpina White", steintype: "Silestone kompositt", silikon: "Alpina White, Kensho, ID: 93678", leverandor: "Colorsil", platelengde: "3250 mm" },
+
+      { stein: "Clamshell 4130", steintype: "Caesarstone kompositt", silikon: "Cincel Grey, Royal Reef, C Pulse, ID: 906646", leverandor: "Colorsil", platelengde: "3030 mm" },
+      { stein: "Shitake 4230", steintype: "Caesarstone kompositt", silikon: "Coral Clay, ID: 906274", leverandor: "Colorsil", platelengde: "3030 mm" },
+      { stein: "Raw concrete 4004", steintype: "Caesarstone kompositt", silikon: "Alpina White, Kensho, ID: 93678", leverandor: "Colorsil", platelengde: "3030 mm" },
+      { stein: "Bianco drift 6131", steintype: "Caesarstone kompositt", silikon: "Crème 1600", leverandor: "Akemi", platelengde: "3030 mm" },
+
+      { stein: "Pierta Di Luna", steintype: "Neolith Keramisk", silikon: "Grigio", leverandor: "Cosentino", platelengde: "3200 mm" },
+
       { stein: "Labrador Blue", steintype: "Granitt", silikon: "Dow Corning 791", leverandor: "Dow", platelengde: "3000 mm" },
-      { stein: "Adia", steintype: "Dekton Keramisk", silikon: " Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi ", leverandor: " Colordek ", platelengde: "3250 mm" },
-      { stein: " Arga", steintype: "Dekton Keramisk", silikon: " Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi ", leverandor: " Colordek ", platelengde: "3250 mm" },
-      { stein: " Ava", steintype: "Dekton Keramisk", silikon: " Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi ", leverandor: " Colordek ", platelengde: "3250 mm" },
-      { stein: " Avorio", steintype: "Dekton Keramisk", silikon: " Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi ", leverandor: " Colordek ", platelengde: "3250 mm" },
-      { stein: " Nebu", steintype: "Dekton Keramisk", silikon: " Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi ", leverandor: " Colordek ", platelengde: "3250 mm" },
-      { stein: " Taga", steintype: "Dekton Keramisk", silikon: " Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi ", leverandor: " Colordek ", platelengde: "3250 mm" },
-      { stein: " Trevi", steintype: "Dekton Keramisk", silikon: " Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi,ID: 907903 ", leverandor: " Colordek ", platelengde: "3250 mm" },
-      { stein: " Kensho", steintype: "Silestone kompositt", silikon: " Alpina White, Kensho, ID: 93678 ", leverandor: " Colorsil ", platelengde: "3250 mm" },
-      { stein: " Alpina White ", steintype: "Silestone kompositt", silikon: " Alpina White, Kensho, ID: 93678 ", leverandor: " Colorsil ", platelengde: "3250 mm" },
-      { stein: " Clamshell 4130", steintype: "Caesarstone kompositt", silikon: " Cincel grey, Royal reef, C pulse, ID: 906646", leverandor: " Colorsil ", platelengde: "3030 mm" },
-      { stein: " Shitake 4230", steintype: "Caesarstone kompositt", silikon: " Coral clay, ID: 906274", leverandor: " Colorsil ", platelengde: "3030 mm" },
-      { stein: " Raw concrete 4004", steintype: "Caesarstone kompositt", silikon: " AlpinaWhite, Kensho, ID: 93678 leverandor: " Colorsil ", platelengde: "3030 mm" },
-      { stein: " Bianco drift 6131", steintype: "Caesarstone kompositt", silikon: " Crème 1600 ", leverandor: " Akemi ", platelengde: "3030 mm" },
-      { stein: " Pierta Di Luna", steintype: "Neolith Kermaisk", silikon: " Grigo ", leverandor: " Cosentono ", platelengde: "3200 mm" },
-      { stein: "Carrara Marmor", steintype: "Marmor", silikon: "Mapesil AC", leverandor: "Mapei", platelengde: "2800 mm" }
+      { stein: "Emerald Pearl", steintype: "Granitt", silikon: "Dow Corning 799", leverandor: "Dow", platelengde: "3000 mm" },
+      { stein: "Baltic Brown", steintype: "Granitt", silikon: "Soudal Silirub", leverandor: "Soudal", platelengde: "3050 mm" },
+      { stein: "Nero Assoluto", steintype: "Granitt", silikon: "Mapesil AC", leverandor: "Mapei", platelengde: "3000 mm" },
+
+      { stein: "Carrara Marmor", steintype: "Marmor", silikon: "Mapesil AC", leverandor: "Mapei", platelengde: "2800 mm" },
+      { stein: "Calacatta Oro", steintype: "Marmor", silikon: "Dow Corning 781", leverandor: "Dow", platelengde: "2800 mm" },
+      { stein: "Arabescato", steintype: "Marmor", silikon: "Soudal Silirub", leverandor: "Soudal", platelengde: "2750 mm" },
+
+      { stein: "Dekton Sirius", steintype: "Dekton Keramisk", silikon: "Mapesil LM", leverandor: "Mapei", platelengde: "3200 mm" },
+      { stein: "Dekton Zenith", steintype: "Dekton Keramisk", silikon: "Mapesil LM", leverandor: "Mapei", platelengde: "3200 mm" },
+      { stein: "Dekton Aura", steintype: "Dekton Keramisk", silikon: "Mapesil LM", leverandor: "Mapei", platelengde: "3200 mm" },
+      { stein: "Dekton Entzo", steintype: "Dekton Keramisk", silikon: "Mapesil LM", leverandor: "Mapei", platelengde: "3200 mm" }
     ];
 
     const el = (id) => document.getElementById(id);
     const grid = el('grid'), summary = el('summary'), badge = el('badgeCount');
     const q = el('q'), brandFilter = el('brandFilter'), typeFilter = el('typeFilter'), sort = el('sort');
 
-    function unique(list, key) { return Array.from(new Set(list.map(x => x[key]).filter(Boolean))).sort(); }
-    function populateFilters() {
-      unique(DATA, 'leverandor').forEach(b => { const o=document.createElement('option'); o.value=b; o.textContent=b; brandFilter.appendChild(o); });
-      unique(DATA, 'steintype').forEach(t => { const o=document.createElement('option'); o.value=t; o.textContent=t; typeFilter.appendChild(o); });
+    function unique(list, key) {
+      return Array.from(new Set(list.map(x => (x[key] || '').trim()).filter(Boolean))).sort();
     }
+
+    function populateFilters() {
+      unique(DATA, 'leverandor').forEach(b => {
+        const o = document.createElement('option'); o.value = b; o.textContent = b; brandFilter.appendChild(o);
+      });
+      unique(DATA, 'steintype').forEach(t => {
+        const o = document.createElement('option'); o.value = t; o.textContent = t; typeFilter.appendChild(o);
+      });
+    }
+
     function copy(text) { navigator.clipboard?.writeText(text); }
+
     function render(list) {
       grid.innerHTML = '';
       list.forEach(item => {
         grid.innerHTML += `
           <div class="card">
-            <h3>${item.stein}</h3>
-            <div class="kv"><div class="k">Steintype</div><div>${item.steintype}</div></div>
-            <div class="kv"><div class="k">Silikon</div><div><span class="pill" onclick="copy('${item.silikon}')">${item.silikon}</span></div></div>
-            <div class="kv"><div class="k">Leverandør</div><div>${item.leverandor}</div></div>
-            <div class="kv"><div class="k">Platelengde</div><div>${item.platelengde}</div></div>
+            <h3>${(item.stein || '').trim()}</h3>
+            <div class="kv"><div class="k">Steintype</div><div>${(item.steintype || '').trim()}</div></div>
+            <div class="kv"><div class="k">Silikon</div><div><span class="pill" onclick="copy('${(item.silikon || '').replace(/'/g, "\\'").trim()}')">${(item.silikon || '').trim()}</span></div></div>
+            <div class="kv"><div class="k">Leverandør</div><div>${(item.leverandor || '').trim()}</div></div>
+            <div class="kv"><div class="k">Platelengde</div><div>${(item.platelengde || '').trim()}</div></div>
           </div>`;
       });
     }
+
     function apply() {
-      let list = [...DATA];
+      let list = DATA.map(x => ({
+        ...x,
+        stein: (x.stein || '').trim(),
+        steintype: (x.steintype || '').trim(),
+        silikon: (x.silikon || '').trim(),
+        leverandor: (x.leverandor || '').trim(),
+        platelengde: (x.platelengde || '').trim()
+      }));
+
       if (brandFilter.value) list = list.filter(x => x.leverandor === brandFilter.value);
       if (typeFilter.value) list = list.filter(x => x.steintype === typeFilter.value);
-      if (q.value) list = list.filter(x => Object.values(x).join(' ').toLowerCase().includes(q.value.toLowerCase()));
-      list.sort((a,b)=> (a[sort.value]||'').localeCompare(b[sort.value]||''));
+
+      const qv = q.value?.toLowerCase().trim();
+      if (qv) {
+        list = list.filter(x =>
+          [x.stein, x.steintype, x.silikon, x.leverandor, x.platelengde]
+            .join(' | ').toLowerCase().includes(qv)
+        );
+      }
+
+      const key = sort.value || 'stein';
+      list.sort((a,b)=> (a[key]||'').localeCompare(b[key]||''));
+
       render(list);
       summary.textContent = `Viser ${list.length} av ${DATA.length}`;
       badge.textContent = `${DATA.length} typer`;
     }
-    populateFilters(); apply();
-    [q, brandFilter, typeFilter, sort].forEach(e=> e.addEventListener('input', apply));
+
+    populateFilters();
+    apply();
+    [q, brandFilter, typeFilter, sort].forEach(e => e.addEventListener('input', apply));
   </script>
 </body>
 </html>
