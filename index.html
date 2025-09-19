@@ -5,44 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Silikonoversikt</title>
   <style>
-    :root {
-      --bg: #0b1020;
-      --panel: #121a33;
-      --muted: #8ea0bf;
-      --text: #e6eefc;
-      --accent: #7aa2ff;
-      --accent-2: #96f7d2;
-      --radius: 16px;
-    }
     body {
       margin: 0; font-family: system-ui, sans-serif;
-      background: radial-gradient(1200px 800px at 10% 0%, #0b1430 0%, var(--bg) 60%);
-      color: var(--text);
+      background: #0b1430;
+      color: #e6eefc;
     }
     .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
     header { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
     header img { max-width: 220px; height: auto; }
-    .badge { font-size: 12px; color: var(--muted); background: rgba(255,255,255,.06); padding: 6px 10px; border-radius: 999px; }
-    .panel { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); }
+    .badge { font-size: 12px; color: #8ea0bf; background: rgba(255,255,255,.06); padding: 6px 10px; border-radius: 999px; }
+    .panel { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; }
     .toolbar { display: grid; gap: 12px; grid-template-columns: 1fr; padding: 16px; }
     .search input { width: 100%; padding: 10px; border-radius: 8px; border: none; }
     .select { padding: 10px; border-radius: 8px; }
-    .summary { padding: 12px 16px; color: var(--muted); }
+    .summary { padding: 12px 16px; color: #8ea0bf; }
     .grid { display: grid; gap: 12px; padding: 12px; }
     @media (min-width: 640px) { .grid { grid-template-columns: 1fr 1fr; } }
     @media (min-width: 980px) { .grid { grid-template-columns: 1fr 1fr 1fr; } }
     .card { padding: 16px; border-radius: 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
     .card h3 { margin: 0; font-size: 18px; }
     .kv { display: grid; grid-template-columns: 120px 1fr; gap: 6px; font-size: 14px; }
-    .kv .k { color: var(--muted); }
-    .pill { display: inline-block; border: 1px dashed rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 999px; font-size: 12px; }
-    footer { opacity: .8; color: var(--muted); font-size: 12px; padding: 16px; text-align: center; }
+    .kv .k { color: #8ea0bf; }
+    .pill { display: inline-block; border: 1px dashed rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 999px; font-size: 12px; cursor: pointer; }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <!-- Logo må ligge som SIGVARTSEN-hvit.png i samme mappe -->
       <img src="SIGVARTSEN-hvit.png" alt="Sigvartsen logo"/>
       <div class="badge" id="badgeCount">0 typer</div>
     </header>
@@ -64,16 +53,14 @@
       <div class="summary" id="summary">Viser 0 av 0</div>
       <div class="grid" id="grid"></div>
     </section>
-
-    <footer>
-      Tips: Trykk på silikon-navnet for å kopiere. Legg gjerne siden på iPhone/iPad Hjem-skjerm.
-    </footer>
   </div>
 
   <script>
-    // DINE DATA – fyll på her
     const DATA = [
       { stein: "Labrador Blue", steintype: "Granitt", silikon: "Dow Corning 791", leverandor: "Dow", platelengde: "3000 mm" },
+      { stein: "Adia", steintype: "Dekton Keramisk", silikon: " Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi ", leverandor: " Colordek ", platelengde: "3250 mm" },
+      { stein: " Arga", steintype: "Dekton Keramisk", silikon: " Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi ", leverandor: " Colordek ", platelengde: "3250 mm" },
+      { stein: " Ava", steintype: "Dekton Keramisk", silikon: " Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi ", leverandor: " Colordek ", platelengde: "3250 mm" },
       { stein: "Carrara Marmor", steintype: "Marmor", silikon: "Mapesil AC", leverandor: "Mapei", platelengde: "2800 mm" }
     ];
 
