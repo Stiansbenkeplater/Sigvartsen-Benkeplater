@@ -73,8 +73,9 @@
   <script>
     // DINE DATA – fyll på her
     const DATA = [
-      { stein: "Adia", steintype: "Dekton Keramisk", silikon: " Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi ", leverandor: " Colordek ", platelengde: "3250 mm", pleiesett: "Dekton Pleiesett" },
-      { stein: "Carrara Marmor", steintype: "Marmor", silikon: "Mapesil AC", leverandor: "Mapei", platelengde: "2800 mm" }
+      { stein: "Adia", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi", leverandor: "Colordek", platelengde: "3250 mm", pleiesett: "Dekton Pleiesett" },
+      { stein: "Labrador Blue", steintype: "Granitt", silikon: "Dow Corning 791", leverandor: "Dow", platelengde: "3000 mm", pleiesett: "Granitt Pleiesett" },
+      { stein: "Carrara Marmor", steintype: "Marmor", silikon: "Mapesil AC", leverandor: "Mapei", platelengde: "2800 mm", pleiesett: "Marmor Pleiesett" }
     ];
 
     const el = (id) => document.getElementById(id);
@@ -97,6 +98,7 @@
             <div class="kv"><div class="k">Silikon</div><div><span class="pill" onclick="copy('${item.silikon}')">${item.silikon}</span></div></div>
             <div class="kv"><div class="k">Leverandør</div><div>${item.leverandor}</div></div>
             <div class="kv"><div class="k">Platelengde</div><div>${item.platelengde}</div></div>
+            <div class="kv"><div class="k">Pleiesett</div><div>${item.pleiesett}</div></div>
           </div>`;
       });
     }
