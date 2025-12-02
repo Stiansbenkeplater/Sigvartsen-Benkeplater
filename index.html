@@ -61,37 +61,20 @@
 
   <script>
     const DATA = [
-      { stein: "Adia", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" },
-      { stein: "Arga", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
-      { stein: "Ava", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" },
-      { stein: "Avorio", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" },
-      { stein: "Nebu", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
-      { stein: "Taga", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" },
-      { stein: "Trevi", steintype: "Dekton Keramisk", silikon: "Adia, Arga, Ava, Avorio, Nebu, Taga, Trevi, ID: 907903", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Clamshell 4130", steintype: "Caesarstone kompositt", silikon: "Cincel grey, Royal reef, C pulse, ID: 906646", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
+{ stein: "Shitake 4230", steintype: "Caesarstone kompositt", silikon: "Coral clay, ID: 906274", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
+{ stein: "Raw concrete 4004", steintype: "Caesarstone kompositt", silikon: "AlpinaWhite, Kensho, ID: 93678", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
+{ stein: "Bianco drift 6131", steintype: "Caesarstone kompositt", silikon: "Creme 1600", leverandor: "Akemi", platelengde: "3320 mm", lagervare: "Ja" },
+{ stein: "Piatra grey 5003", steintype: "Caesarstone kompositt", silikon: "Calypso, Cinder craze, ID: 906209", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
+{ stein: "Frosty Carrina 5141", steintype: "Caesarstone kompositt", silikon: "Blanco Standard", leverandor: "Colorsil", platelengde: "3320 mm", lagervare: "Ja" },
+{ stein: "London grey 5000", steintype: "Caesarstone kompositt", silikon: "Lys grå", leverandor: "CT1", platelengde: "3030 mm", lagervare: "Ja" },
+{ stein: "Noble grey 5211", steintype: "Caesarstone kompositt", silikon: "Niebla/Poblenou/alu nube", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
+{ stein: "Turbine grey 6313", steintype: "Caesarstone kompositt", silikon: "Grau 1840", leverandor: "Akemi", platelengde: "3030 mm", lagervare: "Ja" },
+{ stein: "Vanilla Noir 5100", steintype: "Caesarstone kompositt", silikon: "Sort", leverandor: "CT1", platelengde: "3030 mm", lagervare: "Ja" },
+{ stein: "Cloudburst Concrete 4011", steintype: "Caesarstone kompositt", silikon: "Blanco Oscura/Dark white", leverandor: "Colorsil", platelengde: "3320 mm", lagervare: "Ja" },
+{ stein: "Moorland fog 6046", steintype: "Caesarstone kompositt", silikon: "Creme 1600", leverandor: "Akemi", platelengde: "3320 mm", lagervare: "Ja" },
+{ stein: "Taj Royale 5212", steintype: "Caesarstone kompositt", silikon: "Creme 1600", leverandor: "Akemi", platelengde: "3030 mm", lagervare: "Ja" },
 
-      { stein: "Kensho", steintype: "Silestone kompositt", silikon: "Alpina White, Kensho, ID: 93678", leverandor: "Colorsil", platelengde: "3250 mm", lagervare: "Ja" },
-      { stein: "Alpina White", steintype: "Silestone kompositt", silikon: "Alpina White, Kensho, ID: 93678", leverandor: "Colorsil", platelengde: "3250 mm", lagervare: "Ja" },
-
-      { stein: "Clamshell 4130", steintype: "Caesarstone kompositt", silikon: "Cincel Grey, Royal Reef, C Pulse, ID: 906646", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Nei" },
-      { stein: "Shitake 4230", steintype: "Caesarstone kompositt", silikon: "Coral Clay, ID: 906274", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
-      { stein: "Raw concrete 4004", steintype: "Caesarstone kompositt", silikon: "Alpina White, Kensho, ID: 93678", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Nei" },
-      { stein: "Bianco drift 6131", steintype: "Caesarstone kompositt", silikon: "Crème 1600", leverandor: "Akemi", platelengde: "3030 mm", lagervare: "Ja" },
-
-      { stein: "Pierta Di Luna", steintype: "Neolith Keramisk", silikon: "Grigio", leverandor: "Cosentino", platelengde: "3200 mm", lagervare: "Ja" },
-
-      { stein: "Labrador Blue", steintype: "Granitt", silikon: "Dow Corning 791", leverandor: "Dow", platelengde: "3000 mm", lagervare: "Ja" },
-      { stein: "Emerald Pearl", steintype: "Granitt", silikon: "Dow Corning 799", leverandor: "Dow", platelengde: "3000 mm", lagervare: "Nei" },
-      { stein: "Baltic Brown", steintype: "Granitt", silikon: "Soudal Silirub", leverandor: "Soudal", platelengde: "3050 mm", lagervare: "Ja" },
-      { stein: "Nero Assoluto", steintype: "Granitt", silikon: "Mapesil AC", leverandor: "Mapei", platelengde: "3000 mm", lagervare: "Nei" },
-
-      { stein: "Carrara Marmor", steintype: "Marmor", silikon: "Mapesil AC", leverandor: "Mapei", platelengde: "2800 mm", lagervare: "Ja" },
-      { stein: "Calacatta Oro", steintype: "Marmor", silikon: "Dow Corning 781", leverandor: "Dow", platelengde: "2800 mm", lagervare: "Nei" },
-      { stein: "Arabescato", steintype: "Marmor", silikon: "Soudal Silirub", leverandor: "Soudal", platelengde: "2750 mm", lagervare: "Ja" },
-
-      { stein: "Dekton Sirius", steintype: "Dekton Keramisk", silikon: "Mapesil LM", leverandor: "Mapei", platelengde: "3200 mm", lagervare: "Nei" },
-      { stein: "Dekton Zenith", steintype: "Dekton Keramisk", silikon: "Mapesil LM", leverandor: "Mapei", platelengde: "3200 mm", lagervare: "Ja" },
-      { stein: "Dekton Aura", steintype: "Dekton Keramisk", silikon: "Mapesil LM", leverandor: "Mapei", platelengde: "3200 mm", lagervare: "Nei" },
-      { stein: "Dekton Entzo", steintype: "Dekton Keramisk", silikon: "Mapesil LM", leverandor: "Mapei", platelengde: "3200 mm", lagervare: "Ja" }
     ];
 
     const el = (id) => document.getElementById(id);
