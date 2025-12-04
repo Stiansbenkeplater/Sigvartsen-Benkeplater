@@ -61,48 +61,240 @@
 
   <script>
     const DATA = [
-{ stein: "Clamshell 4130", steintype: "Caesarstone kompositt", silikon: "Cincel grey, Royal reef, C pulse, ID: 906646", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
-{ stein: "Shitake 4230", steintype: "Caesarstone kompositt", silikon: "Coral clay, ID: 906274", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
-{ stein: "Raw concrete 4004", steintype: "Caesarstone kompositt", silikon: "AlpinaWhite, Kensho, ID: 93678", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
-{ stein: "Bianco drift 6131", steintype: "Caesarstone kompositt", silikon: "Creme 1600", leverandor: "Akemi", platelengde: "3320 mm", lagervare: "Ja" },
-{ stein: "Piatra grey 5003", steintype: "Caesarstone kompositt", silikon: "Calypso, Cinder craze, ID: 906209", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
+{ stein: "Clamshell 4130", steintype: "Caesarstone kompositt", silikon: "Cincel Grey, Royal Reef, Concrete Pulse, ID: 906646", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
 
-{ stein: "Frosty Carrina 5141", steintype: "Caesarstone kompositt", silikon: "Ariel, Snowy Ibiza, Blanco Maple, Blanco Norte, Blanco Orion, Stellar Blanco, Et D’or, Et Bella, Lusso, Miami Vena, Miami White, Pearl Jasmine, White Arabesque, ID: 90073", leverandor: "Colorsil", platelengde: "3320 mm", lagervare: "Ja" },
+{ stein: "Shitake 4230", steintype: "Caesarstone kompositt", silikon: "Coral Clay, ID: 906274", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
 
-{ stein: "London grey 5000", steintype: "Caesarstone kompositt", silikon: "Lys grå", leverandor: "CT1", platelengde: "3030 mm", lagervare: "Ja" },
-{ stein: "Turbine grey 6313", steintype: "Caesarstone kompositt", silikon: "Grau 1840", leverandor: "Akemi", platelengde: "3030 mm", lagervare: "Ja" },
+{ stein: "Raw Concrete 4004", steintype: "Caesarstone kompositt", silikon: "Grå", leverandor: "CT1", platelengde: "3030 mm", lagervare: "Ja" },
+
+{ stein: "Bianco Drift 6131", steintype: "Caesarstone kompositt", silikon: "Creme 1600", leverandor: "Akemi", platelengde: "3320 mm", lagervare: "Ja" },
+
+{ stein: "Piatra Grey 5003", steintype: "Caesarstone kompositt", silikon: "Calypso, Cinder Craze, ID: 906209", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
+
+{ stein: "Frosty Carrina 5141", steintype: "Caesarstone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3320 mm", lagervare: "Ja" },
+
+{ stein: "London Grey 5000", steintype: "Caesarstone kompositt", silikon: "Lys grå", leverandor: "CT1", platelengde: "3030 mm", lagervare: "Ja" },
+
+{ stein: "Turbine Grey 6313", steintype: "Caesarstone kompositt", silikon: "Grau 1840", leverandor: "Akemi", platelengde: "3030 mm", lagervare: "Ja" },
+
 { stein: "Vanilla Noir 5100", steintype: "Caesarstone kompositt", silikon: "Sort", leverandor: "CT1", platelengde: "3030 mm", lagervare: "Ja" },
 
-{ stein: "Noble grey 5211", steintype: "Caesarstone kompositt", silikon: "Niebla, Poblenou, Aluminio Nube, ID: 91081", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
+{ stein: "Noble Grey 5211", steintype: "Caesarstone kompositt", silikon: "Poblenou, ID: 91081", leverandor: "Colorsil", platelengde: "3030 mm", lagervare: "Ja" },
 
-{ stein: "Cloudburst Concrete 4011", steintype: "Caesarstone kompositt", silikon: "Dark White, Helix, Lagoon, Lyra, Lime Delight, Pietra, ID: 901599", leverandor: "Colorsil", platelengde: "3320 mm", lagervare: "Ja" },
+{ stein: "Cloudburst Concrete 4011", steintype: "Caesarstone kompositt", silikon: "Dark White, ID: 901599", leverandor: "Colorsil", platelengde: "3320 mm", lagervare: "Ja" },
 
-{ stein: "Moorland fog 6046", steintype: "Caesarstone kompositt", silikon: "Creme 1600", leverandor: "Akemi", platelengde: "3320 mm", lagervare: "Ja" },
+{ stein: "Moorland Fog 6046", steintype: "Caesarstone kompositt", silikon: "Creme 1600", leverandor: "Akemi", platelengde: "3320 mm", lagervare: "Ja" },
+
 { stein: "Taj Royale 5212", steintype: "Caesarstone kompositt", silikon: "Creme 1600", leverandor: "Akemi", platelengde: "3030 mm", lagervare: "Ja" },
+{ stein: "Adia", steintype: "Dekton Keramisk", silikon: "Taga, Arga, Ava, Avorio, Dunna, Nebu, Trevi, Adia, ID: 907903", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Arga", steintype: "Dekton Keramisk", silikon: "Taga, Arga, Ava, Avorio, Dunna, Nebu, Trevi, Adia, ID: 907903", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" },
+{ stein: "Ava", steintype: "Dekton Keramisk", silikon: "Taga, Arga, Ava, Avorio, Dunna, Nebu, Trevi, Adia, ID: 907903", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Avorio", steintype: "Dekton Keramisk", silikon: "Taga, Arga, Ava, Avorio, Dunna, Nebu, Trevi, Adia, ID: 907903", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Dunna", steintype: "Dekton Keramisk", silikon: "Taga, Arga, Ava, Avorio, Dunna, Nebu, Trevi, Adia, ID: 907903", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Nebu", steintype: "Dekton Keramisk", silikon: "Taga, Arga, Ava, Avorio, Dunna, Nebu, Trevi, Adia, ID: 907903", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Taga", steintype: "Dekton Keramisk", silikon: "Taga, Arga, Ava, Avorio, Dunna, Nebu, Trevi, Adia, ID: 907903", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" },
+{ stein: "Trevi", steintype: "Dekton Keramisk", silikon: "Taga, Arga, Ava, Avorio, Dunna, Nebu, Trevi, Adia, ID: 907903", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+
+{ stein: "Aeris", steintype: "Dekton Keramisk", silikon: "Blanco Crema, ID: 907331", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Aura", steintype: "Dekton Keramisk", silikon: "Blanco Crema, ID: 907331", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Awake", steintype: "Dekton Keramisk", silikon: "Blanco Crema, ID: 907331", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Entzo", steintype: "Dekton Keramisk", silikon: "Blanco Crema, ID: 907331", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Kairos22", steintype: "Dekton Keramisk", silikon: "Blanco Crema, ID: 907331", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Limbo", steintype: "Dekton Keramisk", silikon: "Blanco Crema, ID: 907331", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Moone", steintype: "Dekton Keramisk", silikon: "Blanco Crema, ID: 907331", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Natura", steintype: "Dekton Keramisk", silikon: "Blanco Crema, ID: 907331", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Nebbia", steintype: "Dekton Keramisk", silikon: "Blanco Crema, ID: 907331", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" },
+{ stein: "Neural", steintype: "Dekton Keramisk", silikon: "Blanco Crema, ID: 907331", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Polar", steintype: "Dekton Keramisk", silikon: "Blanco Crema, ID: 907331", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Sandik", steintype: "Dekton Keramisk", silikon: "Blanco Crema, ID: 907331", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+
+{ stein: "Bergen", steintype: "Dekton Keramisk", silikon: "Standard White, ID: 906684", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" },
+{ stein: "Halo", steintype: "Dekton Keramisk", silikon: "Standard White, ID: 906684", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Opera", steintype: "Dekton Keramisk", silikon: "Standard White, ID: 906684", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Portum", steintype: "Dekton Keramisk", silikon: "Standard White, ID: 906684", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Rio Branco", steintype: "Dekton Keramisk", silikon: "Standard White, ID: 906684", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Uyuni", steintype: "Dekton Keramisk", silikon: "Standard White, ID: 906684", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Reverie", steintype: "Dekton Keramisk", silikon: "Standard White, ID: 906684", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Zenith", steintype: "Dekton Keramisk", silikon: "Standard White, ID: 906684", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+
+{ stein: "Albarium", steintype: "Dekton Keramisk", silikon: "Standard Cream, ID: 905604", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Danae", steintype: "Dekton Keramisk", silikon: "Standard Cream, ID: 905604", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Helena", steintype: "Dekton Keramisk", silikon: "Standard Cream, ID: 905604", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Khalo", steintype: "Dekton Keramisk", silikon: "Standard Cream, ID: 905604", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Lunar", steintype: "Dekton Keramisk", silikon: "Standard Cream, ID: 905604", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Marmorio", steintype: "Dekton Keramisk", silikon: "Standard Cream, ID: 905604", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" },
+{ stein: "Nacre", steintype: "Dekton Keramisk", silikon: "Standard Cream, ID: 905604", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Rem", steintype: "Dekton Keramisk", silikon: "Standard Cream, ID: 905604", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" },
+{ stein: "Sabbia", steintype: "Dekton Keramisk", silikon: "Standard Cream, ID: 905604", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Nara", steintype: "Dekton Keramisk", silikon: "Standard Cream, ID: 905604", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" },
+
+{ stein: "Kreta", steintype: "Dekton Keramisk", silikon: "Dark Grey, ID: 905606", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Soke", steintype: "Dekton Keramisk", silikon: "Dark Grey, ID: 905606", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+
+{ stein: "Ceppo", steintype: "Dekton Keramisk", silikon: "Keon, Ceppo, ID: 906446", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Keon", steintype: "Dekton Keramisk", silikon: "Keon, Ceppo, ID: 906446", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+
+{ stein: "Kira", steintype: "Dekton Keramisk", silikon: "Kira, ID: 906447", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+
+{ stein: "Argentium", steintype: "Dekton Keramisk", silikon: "Argentium, Kovik, ID: 906356", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Kovik", steintype: "Dekton Keramisk", silikon: "Argentium, Kovik, ID: 906356", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+
+{ stein: "Domoos", steintype: "Dekton Keramisk", silikon: "Sirius, Embers, Somnia, Laos, Domoos, Kovik, ID: 908378", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Laos", steintype: "Dekton Keramisk", silikon: "Sirius, Embers, Somnia, Laos, Domoos, Kovik, ID: 908378", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Sirius", steintype: "Dekton Keramisk", silikon: "Sirius, Embers, Somnia, Laos, Domoos, Kovik, ID: 908378", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Somnia", steintype: "Dekton Keramisk", silikon: "Sirius, Embers, Somnia, Laos, Domoos, Kovik, ID: 908378", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+
+{ stein: "Kelya", steintype: "Dekton Keramisk", silikon: "Radium, Keranium, Kelya, ID: 907332", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+
+{ stein: "Eter", steintype: "Dekton Keramisk", silikon: "Standard Black, ID: 905607", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Bromo", steintype: "Dekton Keramisk", silikon: "Standard Black, ID: 905607", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Laurent", steintype: "Dekton Keramisk", silikon: "Standard Black, ID: 905607", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" },
+
+{ stein: "Daze", steintype: "Dekton Keramisk", silikon: "Blanco Onirika, ID: 906927", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" },
+{ stein: "Laguna", steintype: "Dekton Keramisk", silikon: "Blanco Onirika, ID: 906927", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Lucid", steintype: "Dekton Keramisk", silikon: "Blanco Onirika, ID: 906927", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Malibu", steintype: "Dekton Keramisk", silikon: "Blanco Onirika, ID: 906927", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Marina", steintype: "Dekton Keramisk", silikon: "Blanco Onirika, ID: 906927", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Morpheus", steintype: "Dekton Keramisk", silikon: "Blanco Onirika, ID: 906927", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Salina", steintype: "Dekton Keramisk", silikon: "Blanco Onirika, ID: 906927", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Trance", steintype: "Dekton Keramisk", silikon: "Blanco Onirika, ID: 906927", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Vigil", steintype: "Dekton Keramisk", silikon: "Blanco Onirika, ID: 906927", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+
+{ stein: "Trilium", steintype: "Dekton Keramisk", silikon: "Trilium, Grafite, ID: 906682", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Grafite", steintype: "Dekton Keramisk", silikon: "Trilium, Grafite, ID: 906682", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" },
+
+{ stein: "Umber", steintype: "Dekton Keramisk", silikon: "Umber, ID: 908716", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Valterra", steintype: "Dekton Keramisk", silikon: "Valterra, ID: 906683", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Nei" },
+{ stein: "Grigio", steintype: "Dekton Keramisk", silikon: "Grigio, ID: 909575", leverandor: "Colordek", platelengde: "3250 mm", lagervare: "Ja" }
 { stein: "Limestone Sand", steintype: "Marazzi Keramisk", silikon: "Beige", leverandor: "CT1", platelengde: "3200 mm", lagervare: "Ja" },
-{ stein: "Taj Mahal", steintype: "Marazzi Keramisk", silikon: "Taga, Arga, Nara, Dunna, Avorio, ID: 907903", leverandor: "Colordek", platelengde: "3200 mm", lagervare: "Ja" },
+
+{ stein: "Taj Mahal", steintype: "Marazzi Keramisk", silikon: "Taga, Arga, Ava, Avorio, Dunna, Nebu, Trevi, Adia, ID: 907903", leverandor: "Colordek", platelengde: "3200 mm", lagervare: "Ja" },
 { stein: "Nero Assoluto Polert", steintype: "Naturstein", silikon: "Svart", leverandor: "CT1", platelengde: "Ta kontakt for makslengde", lagervare: "Ja" },
+
 { stein: "Nero Assoluto Matt", steintype: "Naturstein", silikon: "Svart", leverandor: "CT1", platelengde: "Ta kontakt for makslengde", lagervare: "Ja" },
+
 { stein: "Cambrian Black", steintype: "Naturstein", silikon: "Svart", leverandor: "CT1", platelengde: "Ta kontakt for makslengde", lagervare: "Ja" },
+
 { stein: "Black Galaxy", steintype: "Naturstein", silikon: "Svart", leverandor: "CT1", platelengde: "Ta kontakt for makslengde", lagervare: "Ja" },
+
 { stein: "Lundhs Emerald", steintype: "Naturstein", silikon: "Svart", leverandor: "CT1", platelengde: "Ta kontakt for makslengde", lagervare: "Ja" },
+
 { stein: "Lundhs Blue", steintype: "Naturstein", silikon: "Marengo, ID: 901436", leverandor: "Colorsil", platelengde: "Ta kontakt for makslengde", lagervare: "Ja" },
+
 { stein: "Lundhs Antique", steintype: "Naturstein", silikon: "Brun", leverandor: "CT1", platelengde: "Ta kontakt for makslengde", lagervare: "Ja" },
+
 { stein: "Carrara Polert/Matt", steintype: "Naturstein", silikon: "Lys grå", leverandor: "CT1", platelengde: "Ta kontakt for makslengde", lagervare: "Ja" },
+
 { stein: "Jura Grey", steintype: "Naturstein", silikon: "Coral Clay, ID: 906274", leverandor: "Colorsil", platelengde: "Ta kontakt for makslengde", lagervare: "Ja" },
-{ stein: "Pierta Di Luna", steintype: "Neolith Keramisk", silikon: "Grigio, Ceppo, ID: 909530", leverandor: "Colordek", platelengde: "3200 mm", lagervare: "Ja" },
+{ stein: "Pierta Di Luna", steintype: "Neolith Keramisk", silikon: "Keon, Ceppo, ID: 906446", leverandor: "Colordek", platelengde: "3200 mm", lagervare: "Ja" },
 
-{ stein: "Abu Dhabi White", steintype: "Neolith Keramisk", silikon: "Blanco Onirika, Trance, Daze, Laguna, Lucid, Malibu, Marina, Salina, Vigil, Morpheus, ID: 906927", leverandor: "Colordek", platelengde: "3200 mm", lagervare: "Ja" },
+{ stein: "Abu Dhabi White", steintype: "Neolith Keramisk", silikon: "Blanco Onirika, ID: 906927", leverandor: "Colordek", platelengde: "3200 mm", lagervare: "Ja" },
 
-{ stein: "Calacatta", steintype: "Neolith Keramisk", silikon: "Bergen, Halo, Mooné, Portum, Rem, ID: 906685", leverandor: "Colordek", platelengde: "3200 mm", lagervare: "Ja" },
+{ stein: "Calacatta", steintype: "Neolith Keramisk", silikon: "Standard White, ID: 906684", leverandor: "Colordek", platelengde: "3200 mm", lagervare: "Ja" },
 
-{ stein: "Himalaya Crystal", steintype: "Neolith Keramisk", silikon: "Blanco Onirika, Trance, Daze, Laguna, Lucid, Malibu, Marina, Salina, Vigil, Morpheus, ID: 906927", leverandor: "Colordek", platelengde: "3200 mm", lagervare: "Ja" },
+{ stein: "Himalaya Crystal", steintype: "Neolith Keramisk", silikon: "Blanco Onirika, ID: 906927", leverandor: "Colordek", platelengde: "3200 mm", lagervare: "Ja" },
 
-{ stein: "Retrostone", steintype: "Neolith Keramisk", silikon: "Taga, Arga, Nara, Dunna, Avorio, ID: 907903", leverandor: "Colordek", platelengde: "3200 mm", lagervare: "Ja" },
+{ stein: "Retrostone", steintype: "Neolith Keramisk", silikon: "Taga, Arga, Ava, Avorio, Dunna, Nebu, Trevi, Adia, ID: 907903", leverandor: "Colordek", platelengde: "3200 mm", lagervare: "Ja" },
 
 { stein: "Shilin", steintype: "Neolith Keramisk", silikon: "Creme 1600", leverandor: "Akemi", platelengde: "3200 mm", lagervare: "Ja" },
 
-{ stein: "Wulong", steintype: "Neolith Keramisk", silikon: "Kira, ID: 908033", leverandor: "Colordek", platelengde: "3200 mm", lagervare: "Ja" },
+{ stein: "Wulong", steintype: "Neolith Keramisk", silikon: "Kira, ID: 906447", leverandor: "Colordek", platelengde: "3200 mm", lagervare: "Ja" }
+{ stein: "Helix", steintype: "Silestone kompositt", silikon: "Dark White, ID: 901599", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Lagoon", steintype: "Silestone kompositt", silikon: "Dark White, ID: 901599", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Ja" },
+{ stein: "Lyra", steintype: "Silestone kompositt", silikon: "Dark White, ID: 901599", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Pietra", steintype: "Silestone kompositt", silikon: "Dark White, ID: 901599", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Lime Delight", steintype: "Silestone kompositt", silikon: "Dark White, ID: 901599", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Ja" },
+{ stein: "Calacatta Tova", steintype: "Silestone kompositt", silikon: "Dark White, ID: 901599", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Ariel", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Snowy Ibiza", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Ja" },
+{ stein: "Blanco Maple", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Ja" },
+{ stein: "Blanco Norte", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Blanco Orion", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Bronze Rivers", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Siberian", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Stellar Blanco", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Et D’or", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Et Bella", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Lusso", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Miami Vena", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Miami White", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Pearl Jasmine", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Persian White", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "White Arabesque", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Calacatta Themis", steintype: "Silestone kompositt", silikon: "Standard White, ID: 90073", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Blanco Zeus", steintype: "Silestone kompositt", silikon: "Blanco Zeus, Bianco Calacatta, ID: 901522", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Bianco Calacatta", steintype: "Silestone kompositt", silikon: "Blanco Zeus, Bianco Calacatta, ID: 901522", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Brass Relish", steintype: "Silestone kompositt", silikon: "Brass Relish, ID: 909531", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Cala Blue", steintype: "Silestone kompositt", silikon: "Cala Blue, ID: 908695", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Calypso", steintype: "Silestone kompositt", silikon: "Calypso, Cinder Craze, ID: 906209", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Cinder Craze", steintype: "Silestone kompositt", silikon: "Calypso, Cinder Craze, ID: 906209", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Charcoal Soapstone", steintype: "Silestone kompositt", silikon: "Charcoal Soapstone, ID: 907068", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Chateau Brown", steintype: "Silestone kompositt", silikon: "Chateau Brown, ID: 910224", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Cincel Grey", steintype: "Silestone kompositt", silikon: "Cincel Grey, Royal Reef, Concrete Pulse, ID: 906646", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Royal Reef", steintype: "Silestone kompositt", silikon: "Cincel Grey, Royal Reef, Concrete Pulse, ID: 906646", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Concrete Pulse", steintype: "Silestone kompositt", silikon: "Cincel Grey, Royal Reef, Concrete Pulse, ID: 906646", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Classic Calacatta", steintype: "Silestone kompositt", silikon: "Classic Calacatta, Nolita, Linen Cream, Blanc Élysèe, ID: 907613", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Nolita", steintype: "Silestone kompositt", silikon: "Classic Calacatta, Nolita, Linen Cream, Blanc Élysèe, ID: 907613", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Linen Cream", steintype: "Silestone kompositt", silikon: "Classic Calacatta, Nolita, Linen Cream, Blanc Élysèe, ID: 907613", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Ja" },
+{ stein: "Blanc Élysèe", steintype: "Silestone kompositt", silikon: "Classic Calacatta, Nolita, Linen Cream, Blanc Élysèe, ID: 907613", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Ja" },
+
+{ stein: "Coral Clay", steintype: "Silestone kompositt", silikon: "Coral Clay, ID: 906274", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Corktown", steintype: "Silestone kompositt", silikon: "Corktown, Arden Blue, Bohemian Flame, Romantic Ash, ID: 908463", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Arden Blue", steintype: "Silestone kompositt", silikon: "Corktown, Arden Blue, Bohemian Flame, Romantic Ash, ID: 908463", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Bohemian Flame", steintype: "Silestone kompositt", silikon: "Corktown, Arden Blue, Bohemian Flame, Romantic Ash, ID: 908463", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Romantic Ash", steintype: "Silestone kompositt", silikon: "Corktown, Arden Blue, Bohemian Flame, Romantic Ash, ID: 908463", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Ja" },
+
+{ stein: "Desert Silver", steintype: "Silestone kompositt", silikon: "Desert Silver, Eclectic Pearl, Motion Grey, Victorian Silver, Versailles Ivory, Rivière Rose, ID: 907594", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Eclectic Pearl", steintype: "Silestone kompositt", silikon: "Desert Silver, Eclectic Pearl, Motion Grey, Victorian Silver, Versailles Ivory, Rivière Rose, ID: 907594", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Motion Grey", steintype: "Silestone kompositt", silikon: "Desert Silver, Eclectic Pearl, Motion Grey, Victorian Silver, Versailles Ivory, Rivière Rose, ID: 907594", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Victorian Silver", steintype: "Silestone kompositt", silikon: "Desert Silver, Eclectic Pearl, Motion Grey, Victorian Silver, Versailles Ivory, Rivière Rose, ID: 907594", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Versailles Ivory", steintype: "Silestone kompositt", silikon: "Desert Silver, Eclectic Pearl, Motion Grey, Victorian Silver, Versailles Ivory, Rivière Rose, ID: 907594", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Rivière Rose", steintype: "Silestone kompositt", silikon: "Desert Silver, Eclectic Pearl, Motion Grey, Victorian Silver, Versailles Ivory, Rivière Rose, ID: 907594", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Eternal Statuario", steintype: "Silestone kompositt", silikon: "Eternal Statuario, Eternal Calacatta Gold, Ethereal Dusk, Ethereal Glow, Ethereal Haze, Ethereal Noctis, ID: 907060", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Ja" },
+{ stein: "Eternal Calacatta Gold", steintype: "Silestone kompositt", silikon: "Eternal Statuario, Eternal Calacatta Gold, Ethereal Dusk, Ethereal Glow, Ethereal Haze, Ethereal Noctis, ID: 907060", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Ja" },
+{ stein: "Ethereal Dusk", steintype: "Silestone kompositt", silikon: "Eternal Statuario, Eternal Calacatta Gold, Ethereal Dusk, Ethereal Glow, Ethereal Haze, Ethereal Noctis, ID: 907060", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Ethereal Haze", steintype: "Silestone kompositt", silikon: "Eternal Statuario, Eternal Calacatta Gold, Ethereal Dusk, Ethereal Glow, Ethereal Haze, Ethereal Noctis, ID: 907060", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Ethereal Noctis", steintype: "Silestone kompositt", silikon: "Eternal Statuario, Eternal Calacatta Gold, Ethereal Dusk, Ethereal Glow, Ethereal Haze, Ethereal Noctis, ID: 907060", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Ethereal Glow", steintype: "Silestone kompositt", silikon: "Eternal Statuario, Eternal Calacatta Gold, Ethereal Dusk, Ethereal Glow, Ethereal Haze, Ethereal Noctis, ID: 907060", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Ja" },
+
+{ stein: "Eternal Marfil", steintype: "Silestone kompositt", silikon: "Eternal Marfil, ID: 907604", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Gris Expo", steintype: "Silestone kompositt", silikon: "Gris Expo, Seaport, ID: 90079", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Seaport", steintype: "Silestone kompositt", silikon: "Gris Expo, Seaport, ID: 90079", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Jardin Emerald", steintype: "Silestone kompositt", silikon: "Jardin Emerald, ID: 910223", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Ja" },
+
+{ stein: "Marengo", steintype: "Silestone kompositt", silikon: "Marengo, ID: 901436", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Doradus", steintype: "Silestone kompositt", silikon: "Standard Black, ID: 90085", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Stellar Night", steintype: "Silestone kompositt", silikon: "Standard Black, ID: 90085", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Eternal Marquina", steintype: "Silestone kompositt", silikon: "Standard Black, ID: 90085", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Eternal Noir", steintype: "Silestone kompositt", silikon: "Standard Black, ID: 90085", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Tebas Night", steintype: "Silestone kompositt", silikon: "Standard Black, ID: 90085", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Poblenou", steintype: "Silestone kompositt", silikon: "Poblenou, ID: 91081", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Parisien Blue", steintype: "Silestone kompositt", silikon: "Parisien Blue, Raw D, Raw G, ID: 909667", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Raw D", steintype: "Silestone kompositt", silikon: "Parisien Blue, Raw D, Raw G, ID: 909667", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+{ stein: "Raw G", steintype: "Silestone kompositt", silikon: "Parisien Blue, Raw D, Raw G, ID: 909667", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Posidonia Green", steintype: "Silestone kompositt", silikon: "Posidonia Green, ID: 908715", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Rougui", steintype: "Silestone kompositt", silikon: "Rougui, ID: 905785", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "White Storm", steintype: "Silestone kompositt", silikon: "White Storm, ID: 905948", leverandor: "Colorsil", platelengde: "3230 mm", lagervare: "Nei" },
+
+{ stein: "Yukon", steintype: "Silestone kompositt
+
 
 
     ];
